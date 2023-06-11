@@ -1,0 +1,14 @@
+1. menu
+3. location
+4. signin
+5. cover photo [carousel]
+6. product category
+7. product
+8. cart
+9. footer
+
+utilities
+1. card
+2. text-box [search]
+3. button
+4. 
