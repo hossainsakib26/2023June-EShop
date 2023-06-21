@@ -2,3 +2,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+$color-primary: #070d59;
+$color-secondary: #1f3c88;
+$color-tertiary: #5893d4;
+$color-font: #f7b633;
+$color-font2: #e1e1f6;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  box-sizing: border-box;
+  font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+p, button {
+  font-size: 10px;
+}

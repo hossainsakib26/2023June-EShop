@@ -1,0 +1,28 @@
+@import "src/styles";
+
+
+button {
+  margin: 2.5px 5px 2.5px 0;
+  width: 80px;
+  padding: 4px 4px;
+  letter-spacing: 1px;
+}
+
+.message-button, .follow-button {
+  border: 1.5px solid $color-tertiary;
+  border-radius: 2.5px;
+  transition: 0.5s;
+}
+
+.message-button:hover, .follow-button:hover {
+  letter-spacing: 2px;
+}
+
+.message-button:hover {
+  background-color: $color-tertiary;
+  color: white;
+}
+.follow-button:hover {
+  background-color: $color-font;
+  color: #1a202c;
+}
