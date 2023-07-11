@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { UniverselCardComponent } from './utilities/card/universel-card/universel-card.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './utilities/menu/menu.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { MenuComponent } from './utilities/menu/menu.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

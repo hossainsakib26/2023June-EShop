@@ -1,7 +1,14 @@
 @import "src/styles";
 
 
-button {
+.i-button {
+  margin: 0;
+  width: 0;
+  padding: 0;
+  background-color: #1a202c;
+}
+
+.button {
   margin: 2.5px 5px 2.5px 0;
   width: 80px;
   padding: 4px 4px;
