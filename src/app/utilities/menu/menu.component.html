@@ -1,8 +1,7 @@
 
 
-
 <div class="nav-mobile">
-  <button type="button" class="i-button nav-button">
+  <button type="button" class="i-button nav-button" (click)="on_off_Menu()">
     <fa-icon [icon]="iconBars"></fa-icon>
   </button>
   <a routerLink="#" class="">
@@ -10,9 +9,9 @@
   </a>
 </div>
 
-<div class="drawer-back-glass"></div>
+<div #drawer1 id="drawer-back" class="drawer-back-glass position-left-out-100"></div>
 
-<div class="drawer">
+<div #drawer2 id="drawer" class="drawer position-left-out-100">
 
   <a routerLink="#" class="drawer-logo">
     E-Shop
