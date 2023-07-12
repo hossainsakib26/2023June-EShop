@@ -10,10 +10,17 @@ import {forEach} from "@angular-devkit/schematics";
 export class MenuComponent implements OnInit{
   iconBars = faBars;
 
+  forMobile = true;
+
   constructor(public el: ElementRef) {
   }
 
   ngOnInit(): void {
+    this.isForMenu();
+  }
+
+  isForMenu() {
+    (window.innerWidth > 768) ? this.forMobile = false : this.forMobile = true;
   }
 
   on_off_Menu() {
@@ -43,6 +50,15 @@ export class MenuComponent implements OnInit{
         }
       }
     );
+  }
+
+  turnOffMenu() {
+    let element = document.getElementById('drawer-back') as HTMLElement;
+    let drawerElem = document.getElementById('drawer') as HTMLElement;
+    element.classList.remove('position-left-in-100');
+    element.classList.add('position-left-out-100');
+    drawerElem.classList.add('position-left-out-100');
+    drawerElem.classList.remove('position-left-in-75');
   }
 
 }

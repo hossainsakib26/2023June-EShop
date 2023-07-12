@@ -1,6 +1,4 @@
-
-
-<div class="nav-mobile">
+<div *ngIf="forMobile" class="nav-mobile">
   <button type="button" class="i-button nav-button" (click)="on_off_Menu()">
     <fa-icon [icon]="iconBars"></fa-icon>
   </button>
@@ -9,7 +7,7 @@
   </a>
 </div>
 
-<div #drawer1 id="drawer-back" class="drawer-back-glass position-left-out-100"></div>
+<div #drawer1 id="drawer-back" class="drawer-back-glass position-left-out-100" (click)="turnOffMenu()"></div>
 
 <div #drawer2 id="drawer" class="drawer position-left-out-100">
 
