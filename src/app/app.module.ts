@@ -7,6 +7,7 @@ import { UniverselCardComponent } from './utilities/card/universel-card/universe
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './utilities/menu/menu.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SearchBoxComponent } from './utilities/search-box/search-box.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     UniverselCardComponent,
     HomeComponent,
     MenuComponent,
+    SearchBoxComponent,
   ],
   imports: [
     BrowserModule,

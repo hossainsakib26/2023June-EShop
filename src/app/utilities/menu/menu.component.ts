@@ -1,6 +1,6 @@
 import {Component, OnInit, ElementRef} from '@angular/core';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import {forEach} from "@angular-devkit/schematics";
+import { faBars, faSearch, faArrowRightToBracket, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-menu',
@@ -9,6 +9,9 @@ import {forEach} from "@angular-devkit/schematics";
 })
 export class MenuComponent implements OnInit{
   iconBars = faBars;
+  iconSearch = faSearch;
+  iconLogin = faArrowRightToBracket;
+  iconCart = faCartShopping;
 
   forMobile = true;
 
@@ -20,7 +23,7 @@ export class MenuComponent implements OnInit{
   }
 
   isForMenu() {
-    (window.innerWidth > 768) ? this.forMobile = false : this.forMobile = true;
+    // (window.innerWidth > 768) ? this.forMobile = false : this.forMobile = true;
   }
 
   on_off_Menu() {
@@ -28,6 +31,7 @@ export class MenuComponent implements OnInit{
     let drawerElem = document.getElementById('drawer') as HTMLElement;
     let list = element.classList;
     let drawerList = drawerElem.classList;
+    console.log(Object.keys({list}));
     list.forEach(
       (c, i) => {
         if ((i == 1) && (c === 'position-left-out-100')) {
@@ -50,6 +54,10 @@ export class MenuComponent implements OnInit{
         }
       }
     );
+  }
+
+  addOrDeleteClass(arr: any[]) {
+
   }
 
   turnOffMenu() {

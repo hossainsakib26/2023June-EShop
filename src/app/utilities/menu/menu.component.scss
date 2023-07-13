@@ -27,15 +27,28 @@ a {
   position: fixed;
   z-index: 9999;
 
-
   .nav-button {
-    //background-color: #1a202c;
 
     fa-icon {
       color: white;
       font-weight: 900;
       font-size: x-large;
     }
+  }
+
+  form{
+    display: none;
+    label{}
+    input{}
+    button{}
+  }
+
+  .btn-login {display: none}
+
+  .cart-section {
+    display: none;
+    fa-icon{}
+    span {}
   }
 }
 
@@ -47,7 +60,7 @@ a {
 }
 .position-left-in-75 {
   left: 0;
-  transition: left 3s;
+  transition: left 2.3s;
 }
 .position-left-out-100, .position-left-in-100 {transition: left 1.5s;}
 
@@ -81,4 +94,50 @@ a {
     color: $color-font;
     margin: 0.5rem;
   }
+}
+
+@media only screen and (min-width: 768px){
+
+  .nav-mobile {
+    justify-content: start;
+
+    .nav-button {
+      display: inline;
+      fa-icon {}
+    }
+
+    a {
+
+    }
+    form{
+      display: inline;
+      label{}
+      input{}
+      button{}
+    }
+
+    .btn-login {display: inline}
+
+    .cart-section {
+      display: inline;
+      fa-icon{}
+      span {}
+    }
+  }
+
+  .drawer-back-glass {
+    display: none;
+  }
+
+  .drawer {
+    display: none;
+    .drawer-logo {
+
+    }
+
+    .menu-list {
+
+    }
+  }
+
 }

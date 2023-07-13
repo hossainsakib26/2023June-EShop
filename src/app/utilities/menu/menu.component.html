@@ -1,15 +1,31 @@
-<div *ngIf="forMobile" class="nav-mobile">
+<nav *ngIf="forMobile" class="nav-mobile">
   <button type="button" class="i-button nav-button" (click)="on_off_Menu()">
     <fa-icon [icon]="iconBars"></fa-icon>
   </button>
   <a routerLink="#" class="">
     E-Shop
   </a>
-</div>
+  <form method="POST" action="" class="form search-form">
+    <label for="search-box" class="search-label">Search Products</label>
+    <input type="text" id="search-box" class="text search-box">
+    <button type="submit" name="search">
+      <fa-icon [icon]="iconSearch"></fa-icon>
+    </button>
+  </form>
 
-<div #drawer1 id="drawer-back" class="drawer-back-glass position-left-out-100" (click)="turnOffMenu()"></div>
+  <button class="btn btn-login" type="button">
+    Login <fa-icon [icon]="iconLogin"></fa-icon>
+  </button>
 
-<div #drawer2 id="drawer" class="drawer position-left-out-100">
+  <div class="cart-section">
+    <fa-icon [icon]="iconCart"></fa-icon>
+    <span>Cart</span>
+  </div>
+</nav>
+
+<div *ngIf="forMobile" #drawer1 id="drawer-back" class="drawer-back-glass position-left-out-100" (click)="turnOffMenu()"></div>
+
+<div *ngIf="forMobile" #drawer2 id="drawer" class="drawer position-left-out-100">
 
   <a routerLink="#" class="drawer-logo">
     E-Shop
@@ -24,4 +40,5 @@
       <li>Flash Sale</li>
     </ul>
   </div>
+
 </div>
