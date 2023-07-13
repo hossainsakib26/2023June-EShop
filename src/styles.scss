@@ -16,11 +16,16 @@ $common-space-y: 2.5rem;
 $main-space-x: 10rem;
 $main-space-x: 7.5rem;
 
+:root {
+  //font-size: 10px;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  //font-size: 10px;
 }
 
 body {

@@ -9,18 +9,21 @@
   <div class="search-div">
     <app-search-box></app-search-box>
   </div>
+  <div class="right-section">
+    <button class="btn btn-text-icon btn-green" type="button">
+      <span>Login</span>
+      <fa-icon [icon]="iconLogin"></fa-icon>
+    </button>
 
-  <button class="btn btn-login" type="button">
-    Login <fa-icon [icon]="iconLogin"></fa-icon>
-  </button>
-
-  <div class="cart-section">
-    <fa-icon [icon]="iconCart"></fa-icon>
-    <span>Cart</span>
+    <button class="btn btn-icon btn-green" type="button">
+      <fa-icon [icon]="iconCart"></fa-icon>
+    </button>
   </div>
+
 </nav>
 
-<div *ngIf="forMobile" #drawer1 id="drawer-back" class="drawer-back-glass position-left-out-100" (click)="turnOffMenu()"></div>
+<div *ngIf="forMobile" #drawer1 id="drawer-back" class="drawer-back-glass position-left-out-100"
+     (click)="turnOffMenu()"></div>
 
 <div *ngIf="forMobile" #drawer2 id="drawer" class="drawer position-left-out-100">
 

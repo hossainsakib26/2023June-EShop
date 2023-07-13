@@ -8,10 +8,10 @@ a {
   letter-spacing: 0.4rem;
   color: white;
 
-  logo {
-    height: 1.4rem;
-    width: 3rem;
-  }
+  //logo {
+  //  height: 1.4rem;
+  //  width: 3rem;
+  //}
 }
 
 .nav-mobile {
@@ -24,7 +24,7 @@ a {
   justify-content: space-between;
   align-items: center;
 
-  position: relative;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 9999;
@@ -42,13 +42,18 @@ a {
     display: none;
   }
 
-  .btn-login {display: none}
-
-  .cart-section {
+  .right-section {
     display: none;
-    fa-icon{}
-    span {}
+    .btn-login {display: none}
+
+    .cart-section {
+      display: none;
+      fa-icon{}
+      span {}
+    }
   }
+
+
 }
 
 .position-left-out-100 {
@@ -64,24 +69,23 @@ a {
 .position-left-out-100, .position-left-in-100 {transition: left 1.5s;}
 
 .drawer-back-glass {
-  height: calc(100% - 3rem);
   width: 100%;
   background-color: #1a202c50;
 
-  position: absolute;
   z-index: 99;
-  top: 3rem;
 }
-
+.drawer-back-glass, .drawer {
+  height: calc(100% - 4rem);
+  //height: 100%;
+  position: absolute;
+  top: 4rem;
+}
 .drawer {
-  height: calc(100% - 3rem);
   width: 75%;
   max-width: 460px;
   background-color: $color-secondary;
   padding: 1rem;
 
-  position: absolute;
-  top: 3rem;
   z-index: 999;
 
   .drawer-logo {
@@ -114,12 +118,17 @@ a {
       display: inline;
     }
 
-    .btn-login {display: inline}
+    .right-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 20%;
 
-    .cart-section {
-      display: inline;
-      fa-icon{}
-      span {}
+      .cart-section {
+        display: inline;
+        fa-icon{}
+        span {}
+      }
     }
   }
 
