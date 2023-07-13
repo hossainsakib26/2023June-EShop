@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {faSearch} from '@fortawesome/free-solid-svg-icons'
 
 @Component({
   selector: 'app-search-box',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-box.component.scss']
 })
 export class SearchBoxComponent {
+
+  iconSearch = faSearch;
+
 
 }

@@ -1,5 +1,5 @@
 import {Component, OnInit, ElementRef} from '@angular/core';
-import { faBars, faSearch, faArrowRightToBracket, faCartShopping } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faArrowRightToBracket, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -9,7 +9,6 @@ import { faBars, faSearch, faArrowRightToBracket, faCartShopping } from '@fortaw
 })
 export class MenuComponent implements OnInit{
   iconBars = faBars;
-  iconSearch = faSearch;
   iconLogin = faArrowRightToBracket;
   iconCart = faCartShopping;
 
@@ -31,7 +30,7 @@ export class MenuComponent implements OnInit{
     let drawerElem = document.getElementById('drawer') as HTMLElement;
     let list = element.classList;
     let drawerList = drawerElem.classList;
-    console.log(Object.keys({list}));
+    // console.log(Object.keys({list}));
     list.forEach(
       (c, i) => {
         if ((i == 1) && (c === 'position-left-out-100')) {

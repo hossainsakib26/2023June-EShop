@@ -5,13 +5,10 @@
   <a routerLink="#" class="">
     E-Shop
   </a>
-  <form method="POST" action="" class="form search-form">
-    <label for="search-box" class="search-label">Search Products</label>
-    <input type="text" id="search-box" class="text search-box">
-    <button type="submit" name="search">
-      <fa-icon [icon]="iconSearch"></fa-icon>
-    </button>
-  </form>
+
+  <div class="search-div">
+    <app-search-box></app-search-box>
+  </div>
 
   <button class="btn btn-login" type="button">
     Login <fa-icon [icon]="iconLogin"></fa-icon>

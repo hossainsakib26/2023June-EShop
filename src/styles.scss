@@ -13,6 +13,8 @@ $color-font: #D3D04F;
 $color-font2: #e1e1f6;
 $common-space-x: 2rem;
 $common-space-y: 2.5rem;
+$main-space-x: 10rem;
+$main-space-x: 7.5rem;
 
 
 * {
@@ -24,6 +26,7 @@ $common-space-y: 2.5rem;
 body {
   box-sizing: border-box;
   font-family: Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10px;
 }
 
 p, button {
