@@ -1,0 +1,38 @@
+@import "./src/styles";
+
+.btn {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  letter-spacing: 1px;
+  background-color: #1a202c20;
+}
+
+.btn-icon-text, .btn-text, .btn-icon {
+  font-size: 1.25rem;
+  color: white;
+}
+
+.btn-icon-text {
+  background-color: #1f3c88;
+  span:nth-child(1) {}
+  span:nth-child(2) {}
+}
+
+.btn-text {
+  background-color: #2b6cb0;
+  span:nth-child(2) {}
+}
+
+.btn-icon {
+  background-color: #2c7a7b;
+  span:nth-child(1) {}
+}
+
+
+.btn-s {
+
+}
+
+.btn-l {}
+
+.btn-x {}

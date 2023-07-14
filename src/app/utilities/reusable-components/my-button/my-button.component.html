@@ -1,0 +1,11 @@
+<button type="{{type}}"
+        [name]="title.toLowerCase()+btnSize+designType"
+        [id]="btnSize+title.toLowerCase()+designType"
+        class="btn {{typesBtn}}">
+  <span *ngIf="(designType === 'icon-text')||(designType === 'icon')">
+    <fa-icon [icon]="getIcon()"></fa-icon>
+  </span>
+  <span *ngIf="(designType === 'icon-text')||(designType === 'text')">
+    {{title}}
+  </span>
+</button>
