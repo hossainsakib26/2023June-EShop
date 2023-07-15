@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ElementRef} from '@angular/core';
 import {
   faBars, faArrowRightToBracket,
   faCartShopping, faBookmark,
@@ -17,14 +17,22 @@ export class MyButtonComponent implements OnInit {
   @Input() designType = 'icon-text'; // icon, text
   @Input() btnSize = 's'; //s = small, l = large, x = extra large,
 
-  // typesBtn = (this.designType === 'icon-text')? 'btn-icon-text'
-  //   : (this.designType === 'icon')? 'btn-icon' : 'btn-text';
   typesBtn = '';
-  constructor() {}
+  sizeBtn = '';
+  btnColor = '';
+
+  constructor() {
+  }
 
   ngOnInit(): void {
-    this.typesBtn = (this.designType === 'icon-text')? 'btn-icon-text'
-      : (this.designType === 'icon')? 'btn-icon' : 'btn-text';
+
+    this.typesBtn = (this.designType === 'icon-text') ? 'btn-icon-text'
+      : (this.designType === 'icon') ? 'btn-icon' : 'btn-text';
+
+    this.sizeBtn = (this.btnSize == 'x') ? 'btn-x'
+      : (this.btnSize == 'l') ? 'btn-l' : 'btn-s';
+
+    this.getBtnColor();
   }
 
   hasIcon(): boolean {
@@ -44,17 +52,34 @@ export class MyButtonComponent implements OnInit {
     return iconName;
   }
 
-  setClasses() {
-    let el = document.getElementById(`${this.btnSize + this.title.toLowerCase() + this.designType}`) as HTMLElement;
-    console.log(el.classList);
-    if (this.designType === 'icon-text') {
-      el.classList.add('btn-icon-text');
-    } else if (this.designType === 'icon') {
-      el.classList.add('btn-icon');
-    } else if (this.designType === 'text') {
-      el.classList.add('btn-text');
+  getBtnColor(): string {
+    switch (this.title != '') {
+      case (this.title.toLowerCase() == 'save'): {
+        this.btnColor = 'btn-green';
+        break;
+      }
+      case (this.title.toLowerCase() == 'update'): {
+        this.btnColor = 'btn-yellow';
+        break;
+      }
+      case (this.title.toLowerCase() == 'delete'): {
+        this.btnColor = 'btn-red';
+        break;
+      }
+      case (this.title.toLowerCase() == 'edit'): {
+        this.btnColor = 'btn-yellow';
+        break;
+      }
+      case (this.title.toLowerCase() == 'menu'): {
+        this.btnColor = 'btn-menu-color';
+        break;
+      }
+      default: {
+        this.btnColor = 'btn-green';
+        break;
+      }
     }
-
+    return this.btnColor;
   }
 
 }
