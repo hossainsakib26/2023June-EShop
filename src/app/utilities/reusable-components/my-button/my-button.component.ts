@@ -2,7 +2,7 @@ import {Component, Input, OnInit, ElementRef} from '@angular/core';
 import {
   faBars, faArrowRightToBracket,
   faCartShopping, faBookmark,
-  faTrash,
+  faTrash, faSquarePen, faPenToSquare,
 } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -48,6 +48,14 @@ export class MyButtonComponent implements OnInit {
       iconName = faTrash;
     } else if (this.title.toLowerCase() === 'menu') {
       iconName = faBars;
+    } else if (this.title.toLowerCase() === 'update') {
+      iconName = faSquarePen;
+    } else if (this.title.toLowerCase() === 'edit') {
+      iconName = faPenToSquare;
+    } else if (this.title.toLowerCase() === 'login') {
+      iconName = faArrowRightToBracket;
+    } else if (this.title.toLowerCase() === 'cart') {
+      iconName = faCartShopping;
     }
     return iconName;
   }
@@ -72,6 +80,10 @@ export class MyButtonComponent implements OnInit {
       }
       case (this.title.toLowerCase() == 'menu'): {
         this.btnColor = 'btn-menu-color';
+        break;
+      }
+      case (this.title.toLowerCase() == 'cart'): {
+        this.btnColor = 'btn-sky-blue';
         break;
       }
       default: {
