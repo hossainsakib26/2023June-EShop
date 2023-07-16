@@ -10,10 +10,12 @@ import { faBars, faArrowRightToBracket, faCartShopping } from '@fortawesome/free
 export class MenuComponent implements OnInit{
 
   constructor() {
+
   }
 
   ngOnInit(): void {
   }
+
 
 
 }
