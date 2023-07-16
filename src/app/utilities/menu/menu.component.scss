@@ -1,0 +1,79 @@
+@import "../../../styles";
+
+.menu-bar, .mobile-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Chela One', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  letter-spacing: 0.4rem;
+  color: white;
+  //background: linear-gradient($color-primary, $color-secondary);
+}
+
+.menu-bar {
+  background-color: #8EAC50;
+  width: 100%;
+  height: 5.5rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  justify-content: center;
+
+  .mobile-nav {
+    margin: 0 auto;
+    width: 95%;
+    padding: 0 0.5rem;
+
+    justify-content: space-between;
+
+  }
+}
+
+
+.back-drawer {
+  width: 100%;
+  height: 100VH;
+  background-color: $color-tertiary-glass;
+
+  z-index: 999;
+}
+
+.drawer {
+  width: 65%;
+  max-width: 25rem;
+  padding: 1.5rem;
+  height: 100VH;
+  background-color: $color-secondary;
+
+  z-index: 9999;
+
+  .logo {
+    text-align: center;
+    color: $color-font;
+    font-size: 2.5rem;
+  }
+
+  .menu-links {
+    color: $color-font;
+    font-size: 1.5rem;
+    padding: 3rem 1rem;
+    border-top: solid 0.5rem $color-tertiary;
+    border-bottom: solid 0.5rem $color-tertiary;
+
+    li {
+      padding: 0 0 1.5rem 0;
+    }
+    li:last-child {
+      padding: 0;
+    }
+  }
+}
+.back-drawer, .drawer {
+  position: fixed;
+}
+

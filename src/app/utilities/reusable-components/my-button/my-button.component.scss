@@ -14,27 +14,35 @@
 
 .btn-icon-text {
 
-  span:nth-child(1) {margin-right: 0.5rem}
-  span:nth-child(2) {}
+  span:nth-child(1) {
+    margin-right: 0.5rem
+  }
+
+  span:nth-child(2) {
+  }
 }
 
 .btn-text {
 
-  span:nth-child(2) {}
+  span:nth-child(2) {
+  }
 }
 
 .btn-icon {
 
-  span:nth-child(1) {}
+  span:nth-child(1) {
+  }
 }
 
 
 .btn-s {
   font-size: 1rem;
 }
+
 .btn-l {
   font-size: 1.25rem;
 }
+
 .btn-x {
   font-size: 1.5rem;
 }
@@ -46,8 +54,23 @@
   letter-spacing: 0.1rem;
 }
 
-.btn-green {background-color: #13a808;}
-.btn-red {background-color: #de0707;}
-.btn-yellow {background-color: #dbd21a;}
-.btn-menu-color {background-color: #17594A;}
-.btn-sky-blue {background-color: #4287f5}
+.btn-green {
+  background-color: #13a808;
+}
+
+.btn-red {
+  background-color: #de0707;
+}
+
+.btn-yellow {
+  background-color: #dbd21a;
+}
+
+.btn-menu-color {
+  background-color: #17594A;
+  //border: solid 1px white;
+}
+
+.btn-sky-blue {
+  background-color: #4287f5
+}
