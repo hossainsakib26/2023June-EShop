@@ -97,7 +97,6 @@ export class MyButtonComponent implements OnInit {
   }
 
  callTheParentMethod() {
-    console.log(this.clickEvent.emit())
     this.clickEvent.emit();
  }
 
