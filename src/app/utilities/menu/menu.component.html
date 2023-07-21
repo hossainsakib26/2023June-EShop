@@ -1,6 +1,9 @@
 <nav class="menu-bar">
   <div class="mobile-nav">
-    <app-my-button title="Menu" type="button" designType="icon" btnSize="x"></app-my-button>
+    <app-my-button
+      title="Menu" type="button"
+      designType="icon" btnSize="x"
+      (clickEvent)="changeDrawerClass()"></app-my-button>
     <a class="logo" routerLink="#">
       E-Shop
     </a>
@@ -8,8 +11,8 @@
 </nav>
 
 
-<div class="back-drawer"></div>
-<div class="drawer">
+<div id="back-drawer" class="back-drawer"></div>
+<div id="drawer" class="drawer">
   <h3 class="logo" routerLink="#">
     E-Shop
   </h3>

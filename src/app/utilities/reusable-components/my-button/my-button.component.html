@@ -1,7 +1,8 @@
 <button type="{{type}}"
         [name]="title.toLowerCase()+btnSize+designType"
         [id]="btnSize+title.toLowerCase()+designType"
-        class="btn {{typesBtn}} {{sizeBtn}} {{btnColor}}">
+        class="btn {{typesBtn}} {{sizeBtn}} {{btnColor}}"
+        (click)="callTheParentMethod()">
   <span *ngIf="(designType === 'icon-text')||(designType === 'icon')">
     <fa-icon [icon]="getIcon()"></fa-icon>
   </span>

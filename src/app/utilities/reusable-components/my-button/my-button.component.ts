@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, ElementRef} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import {
   faBars, faArrowRightToBracket,
   faCartShopping, faBookmark,
@@ -16,6 +16,8 @@ export class MyButtonComponent implements OnInit {
   @Input() type = 'button';
   @Input() designType = 'icon-text'; // icon, text
   @Input() btnSize = 's'; //s = small, l = large, x = extra large,
+
+  @Output() clickEvent = new EventEmitter();
 
   typesBtn = '';
   sizeBtn = '';
@@ -93,5 +95,10 @@ export class MyButtonComponent implements OnInit {
     }
     return this.btnColor;
   }
+
+ callTheParentMethod() {
+    console.log(this.clickEvent.emit())
+    this.clickEvent.emit();
+ }
 
 }

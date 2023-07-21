@@ -1,6 +1,4 @@
 import {Component, OnInit, ElementRef} from '@angular/core';
-import { faBars, faArrowRightToBracket, faCartShopping } from '@fortawesome/free-solid-svg-icons';
-
 
 @Component({
   selector: 'app-menu',
@@ -9,13 +7,14 @@ import { faBars, faArrowRightToBracket, faCartShopping } from '@fortawesome/free
 })
 export class MenuComponent implements OnInit{
 
-  constructor() {
+  constructor() {}
 
+  ngOnInit(): void {}
+
+
+  changeDrawerClass() {
+    console.log(document.getElementById('back-drawer'));
+    console.log(document.getElementById('drawer'));
   }
-
-  ngOnInit(): void {
-  }
-
-
 
 }
