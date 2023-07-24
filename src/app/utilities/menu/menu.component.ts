@@ -1,4 +1,5 @@
 import {Component, OnInit, ElementRef} from '@angular/core';
+import {faArrowRight} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-menu',
@@ -6,6 +7,7 @@ import {Component, OnInit, ElementRef} from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
+  faArrow = faArrowRight;
 
   constructor(private el: ElementRef) {
   }
@@ -41,11 +43,22 @@ export class MenuComponent implements OnInit {
             element.classList.remove('drawer-in');
             element.classList.add('drawer-out');
           }
+
+          if (c === 'left-out') {
+            element.classList.remove('left-out');
+            element.classList.add('left-in');
+          } else if (c === 'left-in') {
+            element.classList.remove('left-in');
+            element.classList.add('left-out');
+          }
         }
       }
     )
+  }
 
-
+  changeCssPropertyValue() {
+    let pcMenuEl = this.el.nativeElement.querySelector('#pc-menu-list');
+    this.addOrRemoveClass(pcMenuEl);
   }
 
 }

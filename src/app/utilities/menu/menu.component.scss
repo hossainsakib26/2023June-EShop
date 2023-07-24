@@ -11,7 +11,6 @@
   font-size: 3rem;
   letter-spacing: 0.4rem;
   color: white;
-  //background: linear-gradient($color-primary, $color-secondary);
 }
 
 .menu-bar {
@@ -30,7 +29,10 @@
     padding: 0 0.5rem;
 
     justify-content: space-between;
+  }
 
+  .pc-nav {
+    display: none;
   }
 }
 
@@ -92,5 +94,83 @@
   //transition: left 1.25s ease 0.25s; // prop, duration, design, delay
 }
 
-.back-drawer{transition: left 0.75s ease 0.75s;}
-.drawer{transition: left 1s ease 1s;}
+.back-drawer{transition: left 0.75s ease;}
+.drawer{transition: left 1s ease;}
+
+#pc-menu-list {
+  display: none;
+}
+
+@media screen and (min-width: 1024px){
+
+  .menu-bar {
+    .mobile-nav {
+      display: none;
+    }
+    .pc-nav {
+      margin: 0 8%;
+      padding: 0 0.5rem;
+      width: 100%;
+      //background-color: #1a202c;
+
+      display: flex;
+      justify-content: space-between;
+
+      .place-menu-logo, .place-search, .place-login-cart{
+        display: flex;
+        align-items: center;
+        gap: 0 2rem;
+      }
+
+      div:nth-child(1) {
+        //background-color: #1f3c88;
+        width: 25%;
+        justify-content: space-between;
+      }
+      div:nth-child(2) {
+        //background-color: #6b46c1;
+        width: 40%;
+        justify-content: center;
+      }
+      div:nth-child(3) {
+        //background-color: #2c7a7b;
+        width: 25%;
+        justify-content: center;
+      }
+    }
+  }
+
+  #pc-menu-list {
+    display: block;
+    padding: 1rem;
+    position: fixed;
+    transition: left 0.5s ease;
+
+    background-color: $color-secondary;
+    width: 25rem;
+    height: 25rem;
+
+    .menu-links {
+      color: $color-font2;
+      font-size: $font-x;
+    }
+
+    ul {
+      margin: 0 auto;
+
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+  .left-out{
+    left: -22%;
+  }
+  .left-in{
+    left: 0%;
+  }
+
+}

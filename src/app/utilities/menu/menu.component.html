@@ -1,4 +1,5 @@
 <nav class="menu-bar">
+  <!-- mobile nav -->
   <div class="mobile-nav">
     <app-my-button
       title="Menu" type="button"
@@ -8,6 +9,28 @@
       E-Shop
     </a>
   </div>
+
+  <!-- pc nav -->
+  <div class="pc-nav">
+
+    <div class="place-menu-logo">
+      <app-my-button
+      title="Menu" type="button"
+      designType="icon" btnSize="x"
+      (clickEvent)="changeCssPropertyValue()"></app-my-button>
+
+      <a class="logo" routerLink="#">
+        E-Shop
+      </a>
+    </div>
+    <div class="place-search">search box</div>
+    <div class="place-login-cart">
+      <app-my-button title="Login" btnSize="x" type="button" designType="icon-text"></app-my-button>
+      <app-my-button title="Cart" btnSize="x" type="button" designType="icon"></app-my-button>
+    </div>
+
+  </div>
+
 </nav>
 
 
@@ -31,6 +54,31 @@
     </li>
     <li>
       <a href="">Career</a>
+    </li>
+  </ul>
+</div>
+
+<div id="pc-menu-list" class="menu-lists left-out">
+  <ul class="menu-links">
+    <li>
+      <a href="">Men's</a>
+      <fa-icon [icon]="faArrow"></fa-icon>
+    </li>
+    <li>
+      <a href="">Women's</a>
+      <fa-icon [icon]="faArrow"></fa-icon>
+    </li>
+    <li>
+      <a href="">Accessories</a>
+      <fa-icon [icon]="faArrow"></fa-icon>
+    </li>
+    <li>
+      <a href="">About</a>
+      <fa-icon [icon]="faArrow"></fa-icon>
+    </li>
+    <li>
+      <a href="">Career</a>
+      <fa-icon [icon]="faArrow"></fa-icon>
     </li>
   </ul>
 </div>

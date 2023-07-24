@@ -13,12 +13,20 @@ $color-secondary: #17594A;
 $color-secondary-glass: #17594A50;
 $color-tertiary: #8EAC50;
 $color-tertiary-glass: #8EAC5050;
-$color-font: #D3D04F;
-$color-font2: #e1e1f6;
+//base margins
 $common-space-x: 2rem;
 $common-space-y: 2.5rem;
 $main-space-x: 10rem;
 $main-space-x: 7.5rem;
+//font sizes & colors
+$font-xxx: 2rem;
+$font-xx: 1.75rem;
+$font-x: 1.5rem;
+$font-l: 1.25rem;
+$font-m: 1rem;
+$color-font: #D3D04F;
+$color-font2: #e1e1f6;
+
 
 :root {
   font-family: 'Roboto', sans-serif;
