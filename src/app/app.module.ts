@@ -9,6 +9,7 @@ import { MenuComponent } from './utilities/menu/menu.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SearchBoxComponent } from './utilities/search-box/search-box.component';
 import { MyButtonComponent } from './utilities/reusable-components/my-button/my-button.component';
+import { MyInputComponent } from './utilities/reusable-components/my-input/my-input.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { MyButtonComponent } from './utilities/reusable-components/my-button/my-
     MenuComponent,
     SearchBoxComponent,
     MyButtonComponent,
+    MyInputComponent,
   ],
   imports: [
     BrowserModule,
