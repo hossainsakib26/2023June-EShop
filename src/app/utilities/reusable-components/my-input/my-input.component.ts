@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class MyInputComponent {
 
+  title = 'Unknown';
+  inputType = 'text';
+
 }

@@ -7,9 +7,9 @@ import { UniverselCardComponent } from './utilities/card/universel-card/universe
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './utilities/menu/menu.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { SearchBoxComponent } from './utilities/search-box/search-box.component';
 import { MyButtonComponent } from './utilities/reusable-components/my-button/my-button.component';
 import { MyInputComponent } from './utilities/reusable-components/my-input/my-input.component';
+import { MySearchComponent } from './utilities/reusable-components/my-search/my-search.component';
 
 
 @NgModule({
@@ -18,9 +18,9 @@ import { MyInputComponent } from './utilities/reusable-components/my-input/my-in
     UniverselCardComponent,
     HomeComponent,
     MenuComponent,
-    SearchBoxComponent,
     MyButtonComponent,
     MyInputComponent,
+    MySearchComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,36 @@
+@import "src/styles";
+
+form {
+  background-color: #4fd1c5;
+  height: 4rem;
+  border: 0.2rem solid #2c7a7b;
+  font-size: $font-x;
+
+  position: relative;
+  z-index: 3;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  padding: 0 1.5rem;
+}
+
+label {
+  position: absolute;
+  left: 1.5rem;
+  top: 20%;
+
+}
+
+.search-size-x {
+  width: 50rem;
+}
+
+.search-size-l {
+  width: 40rem;
+}
+
+.search-size-s {
+  width: 30rem;
+}
